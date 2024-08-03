@@ -1,5 +1,6 @@
 import { UrlShortnerService } from "@/services/UrlShortnerService"; 
 import { NextResponse } from "next/server";
+import { cache } from "react";
 
 
 
@@ -12,10 +13,22 @@ export async function POST(req:Request){
    return NextResponse.json({msg:shortUrl});
 }
 
-export async function GET(req:Request){
-    const shortenService = new UrlShortnerService();
-    const allUrls = await shortenService.getAllUrls();
+// const fetchUrls = cache(async () =>{
+//     const shortenerService = new UrlShortnerService();
+//     const responce = await shortenerService.getAllUrls();
+//     return responce;
+// })
 
-    return NextResponse.json({msg:"Successfullyy",data:allUrls});
+const fetchUrls = async () => {
+    const shortenerService = new UrlShortnerService();
+    const response = await shortenerService.getAllUrls();
+    return response;
+}
+
+export async function GET() {
+    const urls = await fetchUrls();
+    const response = NextResponse.json({urls})
+    // response.headers.set('Cache-Control', 'public, max-age=60, s-maxage=60, stale-while-revalidate=59');
+    return response;
 }
 
