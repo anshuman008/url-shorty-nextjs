@@ -59,7 +59,7 @@ export default async function UrlList() {
                 </tr>
               </thead>
 
-              {urls.urls.map((url, index: number) => (
+              {urls.urls.map((url:any, index: number) => (
                 <tbody key={index}>
                   <tr>
                     <td>{url.originalUrl}</td>

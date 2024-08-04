@@ -8,7 +8,7 @@ export default function Home() {
   const [shortUrl, setShortenUrl] = useState("");
   const [copySuccess, setCopySuccess] = useState(false);
 
-  const fetchApi = async (e) => {
+  const fetchApi = async (e:any) => {
     e.preventDefault();
 
     const originalUrl = e.target.originalUrl.value;
