@@ -1,4 +1,3 @@
-import { SignInButton } from "@clerk/nextjs"
 
 const HeroComp = () => {
   return (
@@ -9,12 +8,6 @@ const HeroComp = () => {
             </div>
 
             <span className="text-white my-6 text-2xl">Dub.co is the open-source link management infrastructure for modern marketing teams.</span>
-
-            <SignInButton  mode="modal">
-                <button className="btn btn-primary text-white">
-                  Get Started
-                  </button>
-              </SignInButton>
           
       </div>
   )

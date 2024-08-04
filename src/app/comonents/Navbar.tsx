@@ -1,10 +1,4 @@
-import {
-  RedirectToSignIn,
-  SignedIn,
-  SignedOut,
-  SignInButton,
-  UserButton,
-} from "@clerk/nextjs";
+
 
 export default function Navbar() {
   return (
@@ -40,12 +34,6 @@ export default function Navbar() {
               <ul className="menu menu-horizontal">
                 {/* Navbar menu content here */}
                 <li className="text-white">
-                  {/* <SignedOut>
-                    <SignInButton mode="modal" />
-                  </SignedOut>
-                  <SignedIn>
-                    <UserButton  showName />
-                  </SignedIn> */}
                 </li>
                 <li className="text-white">
                   <a>Login</a>

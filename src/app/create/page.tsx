@@ -2,19 +2,22 @@
 import Link from "next/link";
 import shortenURL from "../serverActions/ShortenUrlAction"; 
 import { useState } from "react";
-import { SignedOut } from "@clerk/nextjs";
 
 export default function Home() {
   const [shortUrl, setShortenUrl] = useState("");
   const [copySuccess, setCopySuccess] = useState(false);
 
   const fetchApi = async (e:any) => {
-    e.preventDefault();
-
+    e.preventDefault();   
+           
     const originalUrl = e.target.originalUrl.value;
-    const response = await shortenURL(originalUrl);
+
+    if(originalUrl){
+          const response = await shortenURL(originalUrl);
     setShortenUrl(response);
     setCopySuccess(false);
+    }
+
   };
 
   const copyToClipboard = async () => {
