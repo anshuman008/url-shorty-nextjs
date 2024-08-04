@@ -37,8 +37,8 @@ export default async function UrlList() {
   return (
     <div>
       
-      <div className=" bg-[#18181b] flex flex-col justify-center items-center">
-        <div className="p-10 bg-[#0f172a] rounded-lg shadow-2xl max-w-4xl w-full  my-10 ">
+      <div className=" bg-[#0f172a] flex flex-col justify-center items-center">
+        <div className="p-10 bg-[#0f172a] rounded-lg shadow-2xl shadow-slate-400 max-w-4xl w-full  my-10 ">
           <h1 className="text-3xl font-bold mb-6 text-center text-white ">
             All Short Urls
           </h1>
