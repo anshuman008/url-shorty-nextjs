@@ -1,10 +1,6 @@
-import Image from "next/image";
-import { useState } from "react";
-import Navbar from "../comonents/Navbar";
-import { url } from "inspector";
-import next from "next";
+
 import Link from "next/link";
-import { revalidatePath } from "next/cache";
+import { BackgroundGradient } from "@/components/ui/background-gradient";
 
 
 
@@ -27,7 +23,7 @@ export default async function UrlList() {
     console.log(urls);
   } catch (error) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-100">
+      <div className="min-h-screen flex items-center justify-center bg-[#0f172a]">
         <div className="p-10 bg-white rounded-lg shadow-2xl max-w-4xl w-full">
           <h1 className="text-xl font-bold mb-6 text-center text-gray-700">
             Error
@@ -40,12 +36,13 @@ export default async function UrlList() {
 
   return (
     <div>
-      <div className=" bg-gray-400 flex flex-col justify-center items-center">
-        <div className="p-10 bg-white rounded-lg shadow-2xl max-w-4xl w-full  my-10 ">
-          <h1 className="text-3xl font-bold mb-6 text-center text-gray-700 ">
+      
+      <div className=" bg-[#18181b] flex flex-col justify-center items-center">
+        <div className="p-10 bg-[#0f172a] rounded-lg shadow-2xl max-w-4xl w-full  my-10 ">
+          <h1 className="text-3xl font-bold mb-6 text-center text-white ">
             All Short Urls
           </h1>
-          <Link href="/" className="text-gray-800 ">
+          <Link href="/" className="text-white ">
             {" "}
             Go To Home
           </Link>
@@ -53,9 +50,9 @@ export default async function UrlList() {
             <table className="table table-zebra-zebra w-full">
               <thead>
                 <tr>
-                  <th className="text-black text-lg">Original Url</th>
-                  <th className="text-black text-lg">Shorten Url</th>
-                  <th className="text-black text-lg">Clicks</th>
+                  <th className="text-white text-lg">Original Url</th>
+                  <th className="text-white text-lg">Shorten Url</th>
+                  <th className="text-white text-lg">Clicks</th>
                 </tr>
               </thead>
 
@@ -72,7 +69,7 @@ export default async function UrlList() {
                         {url.shortUrl}
                       </a>
                     </td>
-                    <td className="text-black text-xl">{url.clicks}</td>
+                    <td className="text-white text-xl">{url.clicks}</td>
                   </tr>
                 </tbody>
               ))}
