@@ -12,8 +12,7 @@ import { revalidatePath } from "next/cache";
 async function fetchUrls() {
   console.log(`${process.env.NEXT_PUBLIC_BASE_URL}/api/shorten`);
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/api/shorten`,
-    { next: { revalidate: 10 } }
+    `${process.env.NEXT_PUBLIC_BASE_URL}/api/shorten`, {cache:'no-store'}
   );
   if (!response.ok) {
     throw new Error("Failed to fetch urls");
