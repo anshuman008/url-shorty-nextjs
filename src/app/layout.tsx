@@ -15,21 +15,21 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <ClerkProvider>
+    // <ClerkProvider>
       <html lang="en">
         <body>
           <Navbar/>
        
-           <SignedOut>
-            <HeroComp/>
-           </SignedOut>
+           {/* <SignedOut> */}
+            {/* <HeroComp/> */}
+           {/* </SignedOut> */}
 
-          <SignedIn>
+          {/* <SignedIn> */}
             {children}
-          </SignedIn>
+          {/* </SignedIn> */}
         
         </body>
       </html>
-    </ClerkProvider>
+    // </ClerkProvider>
   )
 }

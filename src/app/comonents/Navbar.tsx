@@ -40,15 +40,15 @@ export default function Navbar() {
               <ul className="menu menu-horizontal">
                 {/* Navbar menu content here */}
                 <li className="text-white">
-                  <SignedOut>
+                  {/* <SignedOut>
                     <SignInButton mode="modal" />
                   </SignedOut>
                   <SignedIn>
                     <UserButton  showName />
-                  </SignedIn>
+                  </SignedIn> */}
                 </li>
                 <li className="text-white">
-                  <a>Navbar Item 2</a>
+                  <a>Login</a>
                 </li>
               </ul>
             </div>

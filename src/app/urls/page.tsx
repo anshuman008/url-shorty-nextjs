@@ -41,8 +41,6 @@ export default async function UrlList() {
 
   return (
     <div>
-      <Navbar />
-
       <div className="h-screen bg-gray-400 flex flex-col justify-center items-center">
         <div className="p-10 bg-white rounded-lg shadow-2xl max-w-4xl w-full">
           <h1 className="text-3xl font-bold mb-6 text-center text-gray-700">
