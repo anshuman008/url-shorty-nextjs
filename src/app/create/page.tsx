@@ -9,10 +9,11 @@ export default function Home() {
   const [loading,setLoading] = useState(false);
   const fetchApi = async (e:any) => {
     e.preventDefault();   
-    setLoading(true);      
     const originalUrl = e.target.originalUrl.value;
 
     if(originalUrl){
+      setLoading(true);      
+
           const response = await shortenURL(originalUrl);
     setLoading(false);
     setShortenUrl(response);
